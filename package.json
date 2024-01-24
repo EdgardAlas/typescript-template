@@ -1,0 +1,19 @@
+{
+  "name": "typescript-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsnd --respawn --clear -r tsconfig-paths/register src/index.ts",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/index.js"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.2",
+    "@types/node": "^20.11.6",
+    "rimraf": "^5.0.5",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  }
+}
